@@ -1,0 +1,55 @@
+.rune-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  height: 280px;
+  justify-content: center;
+  width: 100%;
+}
+
+.rune-display--empty {
+  color: rgba(255, 255, 255, 0.4);
+  font-style: italic;
+}
+
+.rune-svg {
+  width: 100%;
+  max-width: 120px;
+}
+
+.rune-path {
+  fill: none;
+  stroke: #c9b8ff;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: drawRune 0.6s ease-out forwards;
+}
+
+@keyframes drawRune {
+  to { stroke-dashoffset: 0; }
+}
+
+.rune-breakdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.rune-breakdown span:first-child {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.rune-breakdown span:last-child {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+}
