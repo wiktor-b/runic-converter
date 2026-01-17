@@ -10,8 +10,11 @@ const RuneDisplay = forwardRef(({ number }, ref) => {
     downloadSVG: () => {
       if (!svgRef.current) return;
       
-      const svg = svgRef.current.cloneNode(true);
+      const svg = svgRef.current.cloneNode(true);      
       svg.querySelectorAll('path').forEach(p => {
+        p.setAttribute('stroke', '#9d7cd8');
+        p.setAttribute('stroke-width', '2.5');
+        p.setAttribute('stroke-linecap', 'round');
         p.style.strokeDasharray = 'none';
         p.style.strokeDashoffset = '0';
         p.style.animation = 'none';
